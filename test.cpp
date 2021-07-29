@@ -14,6 +14,10 @@ int main() {
 	std::istringstream stream(line);
 	while (stream >> value)
 		inputValues.push_back(value);
+	if (inputValues.size() < 3) {
+		std::cout << "Вы ввели меньше трёх чисел.";
+		return 0;
+	}
 	
 	int min1 = INT_MAX;
 	int min2 = INT_MAX;
@@ -39,6 +43,6 @@ int main() {
 		}
 	}
 	
-	std::cout << max1 * max2 * max3;
+	std::cout << "Самое большое произведение 3 чисел: " << max1 * max2 * max3;
 	return 0;
 }
