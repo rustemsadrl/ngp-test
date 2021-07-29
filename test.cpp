@@ -6,14 +6,14 @@
 int main() {
 	
 	std::string line;
-    int value;
+	int value;
 	std::vector<int> inputValues;
 	
 	std::cout << "Введите целые числа, разделённые пробелами:\n";
 	std::getline(std::cin, line);
-    std::istringstream stream(line);
-    while (stream >> value)
-        inputValues.push_back(value);
+	std::istringstream stream(line);
+	while (stream >> value)
+		inputValues.push_back(value);
 	
 	int min1 = INT_MAX;
 	int min2 = INT_MAX;
