@@ -1,0 +1,11 @@
+FUNCTION_BLOCK Damper
+	VAR_INPUT
+		OpeningLimitSwitch, ClosingLimitSwitch, OpeningTorqueStarter, ClosingTorqueStarter, DriveFailure : BOOL;
+		FullStrokeDuration, LimitSwitchRemovalTime : UINT;
+		ActionOpen, ActionClose, ActionStop : BOOL;
+	END_VAR
+	VAR_OUTPUT
+		Open, Close, Stop : BOOL;
+		Status, Errors : UINT;
+	END_VAR
+END_FUNCTION_BLOCK
