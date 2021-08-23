@@ -4,18 +4,17 @@
 #include <sstream>
 
 int main() {
-	
 	std::string line;
 	int value;
 	std::vector<int> inputValues;
 	
-	std::cout << "Введите целые числа, разделённые пробелами:\n";
+	std::cout << "Enter integers separated by spaces:\n";
 	std::getline(std::cin, line);
 	std::istringstream stream(line);
 	while (stream >> value)
 		inputValues.push_back(value);
 	if (inputValues.size() < 3) {
-		std::cout << "Вы ввели меньше трёх чисел.";
+		std::cout << "Enter 3 or more numbers.";
 		return 0;
 	}
 	
@@ -43,6 +42,6 @@ int main() {
 		}
 	}
 	
-	std::cout << "Самое большое произведение 3 чисел: " << max1 * max2 * max3;
+	std::cout << "Maximum product of 3 numbers: " << max1 * max2 * max3;
 	return 0;
 }
